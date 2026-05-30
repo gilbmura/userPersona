@@ -1,4 +1,3 @@
-
 <style>
   .persona-wrap { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 1rem 0; }
   .persona-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); overflow: hidden; }
@@ -30,7 +29,7 @@
   .dot-blue { background: #378ADD; }
   .dot-red { background: #E24B4A; }
   .frustration-item { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; color: var(--color-text-primary); line-height: 1.5; margin-bottom: 6px; }
-  .quote-block { background: var(--color-background-secondary); border-left: 2px solid #1D9E75; border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0; padding: 10px 12px; font-size: 13px; color: var(--color-text-primary); font-style: italic; line-height: 1.6; }
+  .quote-block { background: var(--color-background-secondary); border-left: 2px solid #1D9E75; border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0; padding: 10px 12px; font-size: 13px; color: var(--color-text-primary); font-style: italic; line-height: 1.5; }
   .quote-block.blue-quote { border-left-color: #378ADD; }
   .divider { height: 0.5px; background: var(--color-border-tertiary); margin: 0; }
   .env-row { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--color-text-secondary); margin-bottom: 5px; }
@@ -44,7 +43,9 @@
 
   <div class="persona-card">
     <div class="persona-header">
-      <div class="avatar avatar-staff">AG</div>
+      <div class="avatar avatar-staff">
+        <img src="path/to/agathe-photo.jpg" alt="Agathe Uwimana" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+      </div>
       <div>
         <p class="persona-name">Agathe Uwimana</p>
         <p class="persona-role">Front Desk Receptionist — RSSB Health Insurance Office, Kigali</p>
@@ -108,7 +109,7 @@
 
       <div class="section-block">
         <p class="section-label">Key scenario</p>
-        <p class="scenario-text">At 9 am on a Monday, Agathe faces 40+ people in the lobby. She tears ticket stubs and shouts numbers into the noise. Three clients have wandered outside; when their turn comes, they miss it and argue for re-entry. She spends 20 minutes resolving disputes instead of serving new clients.</p>
+        <p class="scenario-text">At 9 am on a Monday, Agathe faces 40+ people in the lobby. She tears ticket stubs and shouts numbers into the noise. Three clients have wandered outside; when their turn is called, they're not there. She skips them and calls the next number. Their turn is lost.</p>
       </div>
 
       <div class="quote-block">
@@ -120,7 +121,9 @@
 
   <div class="persona-card">
     <div class="persona-header">
-      <div class="avatar avatar-client">EK</div>
+      <div class="avatar avatar-client">
+        <img src="path/to/emmanuel-photo.jpg" alt="Emmanuel Kwizera" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+      </div>
       <div>
         <p class="persona-name">Emmanuel Kwizera</p>
         <p class="persona-role">Operations Officer — Private company, Kacyiru, Kigali</p>
@@ -184,7 +187,7 @@
 
       <div class="section-block">
         <p class="section-label">Key scenario</p>
-        <p class="scenario-text">Emmanuel needs to renew his health insurance card. He arrives at 7:45 am to get a low ticket number, sits in an overcrowded waiting room, and misses a 10 am team meeting at work. He has no idea if he is 5 or 25 positions away. By 11 am he leaves unserved to make another critical work appointment, losing a full morning.</p>
+        <p class="scenario-text">Emmanuel needs to renew his health insurance card. He arrives at 7:45 am to get a low ticket number, sits in an overcrowded waiting room, and misses a 10 am team meeting. By noon, his ticket is only halfway through the queue.</p>
       </div>
 
       <div class="quote-block blue-quote">
