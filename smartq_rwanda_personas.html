@@ -1,0 +1,197 @@
+
+<style>
+  .persona-wrap { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 1rem 0; }
+  .persona-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); overflow: hidden; }
+  .persona-header { padding: 1.25rem; display: flex; align-items: flex-start; gap: 14px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .avatar { width: 54px; height: 54px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 500; flex-shrink: 0; }
+  .avatar-staff { background: #E1F5EE; color: #0F6E56; }
+  .avatar-client { background: #E6F1FB; color: #185FA5; }
+  .persona-name { font-size: 16px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 2px; }
+  .persona-role { font-size: 12px; color: var(--color-text-secondary); margin: 0 0 6px; }
+  .tag-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag { font-size: 11px; padding: 3px 9px; border-radius: 20px; font-weight: 500; }
+  .tag-teal { background: #E1F5EE; color: #0F6E56; }
+  .tag-blue { background: #E6F1FB; color: #185FA5; }
+  .persona-body { padding: 1rem 1.25rem; display: flex; flex-direction: column; gap: 14px; }
+  .section-label { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-tertiary); margin: 0 0 5px; }
+  .demo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .demo-item { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 8px 10px; }
+  .demo-val { font-size: 13px; font-weight: 500; color: var(--color-text-primary); }
+  .demo-key { font-size: 11px; color: var(--color-text-secondary); margin-top: 1px; }
+  .bar-row { margin-bottom: 6px; }
+  .bar-label { display: flex; justify-content: space-between; font-size: 12px; color: var(--color-text-secondary); margin-bottom: 3px; }
+  .bar-track { height: 5px; background: var(--color-background-secondary); border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 4px; }
+  .bar-teal { background: #1D9E75; }
+  .bar-blue { background: #378ADD; }
+  .goal-item { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; color: var(--color-text-primary); line-height: 1.5; margin-bottom: 6px; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; margin-top: 5px; }
+  .dot-teal { background: #1D9E75; }
+  .dot-blue { background: #378ADD; }
+  .dot-red { background: #E24B4A; }
+  .frustration-item { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; color: var(--color-text-primary); line-height: 1.5; margin-bottom: 6px; }
+  .quote-block { background: var(--color-background-secondary); border-left: 2px solid #1D9E75; border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0; padding: 10px 12px; font-size: 13px; color: var(--color-text-primary); font-style: italic; line-height: 1.6; }
+  .quote-block.blue-quote { border-left-color: #378ADD; }
+  .divider { height: 0.5px; background: var(--color-border-tertiary); margin: 0; }
+  .env-row { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--color-text-secondary); margin-bottom: 5px; }
+  .scenario-text { font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; }
+  .section-block { }
+</style>
+
+<h2 class="sr-only">SmartQ-Rwanda user personas: Receptionist and Client</h2>
+
+<div class="persona-wrap">
+
+  <div class="persona-card">
+    <div class="persona-header">
+      <div class="avatar avatar-staff">AG</div>
+      <div>
+        <p class="persona-name">Agathe Uwimana</p>
+        <p class="persona-role">Front Desk Receptionist — RSSB Health Insurance Office, Kigali</p>
+        <div class="tag-row">
+          <span class="tag tag-teal">Staff</span>
+          <span class="tag tag-teal">Queue Manager</span>
+        </div>
+      </div>
+    </div>
+    <div class="persona-body">
+
+      <div class="section-block">
+        <p class="section-label">Demographics</p>
+        <div class="demo-grid">
+          <div class="demo-item"><p class="demo-val">31</p><p class="demo-key">Age</p></div>
+          <div class="demo-item"><p class="demo-val">Kigali</p><p class="demo-key">Location</p></div>
+          <div class="demo-item"><p class="demo-val">6 years</p><p class="demo-key">Experience</p></div>
+          <div class="demo-item"><p class="demo-val">Diploma</p><p class="demo-key">Education</p></div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="section-block">
+        <p class="section-label">Tech comfort</p>
+        <div class="bar-row"><div class="bar-label"><span>Smartphone use</span><span>High</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:82%"></div></div></div>
+        <div class="bar-row"><div class="bar-label"><span>Office software</span><span>Medium</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:56%"></div></div></div>
+        <div class="bar-row"><div class="bar-label"><span>Queue system tools</span><span>Low</span></div><div class="bar-track"><div class="bar-fill bar-teal" style="width:24%"></div></div></div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="section-block">
+        <p class="section-label">Goals</p>
+        <div class="goal-item"><div class="dot dot-teal"></div><span>Keep the lobby calm and organized, especially during the 8–10am rush</span></div>
+        <div class="goal-item"><div class="dot dot-teal"></div><span>Know in advance how many clients are waiting so she can pace service calls</span></div>
+        <div class="goal-item"><div class="dot dot-teal"></div><span>Reduce the number of clients who crowd the counter to check their turn</span></div>
+        <div class="goal-item"><div class="dot dot-teal"></div><span>End each shift having served every client without clients leaving in frustration</span></div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="section-block">
+        <p class="section-label">Frustrations</p>
+        <div class="frustration-item"><div class="dot dot-red"></div><span>Manually shouting ticket numbers causes confusion when the lobby is loud</span></div>
+        <div class="frustration-item"><div class="dot dot-red"></div><span>No way to notify absent clients — skipped turns create disputes and backlog</span></div>
+        <div class="frustration-item"><div class="dot dot-red"></div><span>Paper ticket rolls run out without warning; she must pause service to reprint</span></div>
+        <div class="frustration-item"><div class="dot dot-red"></div><span>Supervisors ask for daily service counts but there is no automatic log</span></div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="section-block">
+        <p class="section-label">Environment</p>
+        <div class="env-row"><i class="ti ti-building" style="font-size:15px" aria-hidden="true"></i>Busy urban office; up to 120 clients per day</div>
+        <div class="env-row"><i class="ti ti-device-desktop" aria-hidden="true" style="font-size:15px"></i>Shared desktop PC at the counter; personal Android phone</div>
+        <div class="env-row"><i class="ti ti-wifi" aria-hidden="true" style="font-size:15px"></i>Reliable office Wi-Fi; occasional power cuts</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="section-block">
+        <p class="section-label">Key scenario</p>
+        <p class="scenario-text">At 9 am on a Monday, Agathe faces 40+ people in the lobby. She tears ticket stubs and shouts numbers into the noise. Three clients have wandered outside; when their turn comes, they miss it and argue for re-entry. She spends 20 minutes resolving disputes instead of serving new clients.</p>
+      </div>
+
+      <div class="quote-block">
+        "When there are more than thirty people here, I stop managing the queue — I'm just managing arguments. I need the system to call them so I can focus on actually helping."
+      </div>
+
+    </div>
+  </div>
+
+  <div class="persona-card">
+    <div class="persona-header">
+      <div class="avatar avatar-client">EK</div>
+      <div>
+        <p class="persona-name">Emmanuel Kwizera</p>
+        <p class="persona-role">Operations Officer — Private company, Kacyiru, Kigali</p>
+        <div class="tag-row">
+          <span class="tag tag-blue">Client</span>
+          <span class="tag tag-blue">Service user</span>
+        </div>
+      </div>
+    </div>
+    <div class="persona-body">
+
+      <div class="section-block">
+        <p class="section-label">Demographics</p>
+        <div class="demo-grid">
+          <div class="demo-item"><p class="demo-val">28</p><p class="demo-key">Age</p></div>
+          <div class="demo-item"><p class="demo-val">Kimironko</p><p class="demo-key">Neighborhood</p></div>
+          <div class="demo-item"><p class="demo-val">Bachelor's</p><p class="demo-key">Education</p></div>
+          <div class="demo-item"><p class="demo-val">Married</p><p class="demo-key">Status</p></div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="section-block">
+        <p class="section-label">Tech comfort</p>
+        <div class="bar-row"><div class="bar-label"><span>Smartphone / apps</span><span>High</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:88%"></div></div></div>
+        <div class="bar-row"><div class="bar-label"><span>Mobile payments (MoMo)</span><span>Daily</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:92%"></div></div></div>
+        <div class="bar-row"><div class="bar-label"><span>Comfort waiting in person</span><span>Low</span></div><div class="bar-track"><div class="bar-fill bar-blue" style="width:18%"></div></div></div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="section-block">
+        <p class="section-label">Goals</p>
+        <div class="goal-item"><div class="dot dot-blue"></div><span>Complete government or bank errands without taking a full day of annual leave</span></div>
+        <div class="goal-item"><div class="dot dot-blue"></div><span>Know roughly how long the wait will be before he even leaves his office</span></div>
+        <div class="goal-item"><div class="dot dot-blue"></div><span>Receive a heads-up notification so he can walk in just before his turn</span></div>
+        <div class="goal-item"><div class="dot dot-blue"></div><span>Avoid the anxiety of not knowing whether he will be served before closing time</span></div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="section-block">
+        <p class="section-label">Frustrations</p>
+        <div class="frustration-item"><div class="dot dot-red"></div><span>Arrives early, waits 2+ hours with no indication of progress or estimated time</span></div>
+        <div class="frustration-item"><div class="dot dot-red"></div><span>Must physically stay in the lobby to avoid losing his place in line</span></div>
+        <div class="frustration-item"><div class="dot dot-red"></div><span>Crowded, stuffy waiting rooms — especially difficult after long commutes</span></div>
+        <div class="frustration-item"><div class="dot dot-red"></div><span>Last visit: waited 3 hours only to be told the system was down; no warning given</span></div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="section-block">
+        <p class="section-label">Environment</p>
+        <div class="env-row"><i class="ti ti-briefcase" style="font-size:15px" aria-hidden="true"></i>Works 8–5; visits government offices during lunch or early morning</div>
+        <div class="env-row"><i class="ti ti-device-mobile" aria-hidden="true" style="font-size:15px"></i>Android smartphone; uses MTN MoMo and WhatsApp daily</div>
+        <div class="env-row"><i class="ti ti-map-pin" aria-hidden="true" style="font-size:15px"></i>Commutes by moto-taxi; travel time to offices is 15–30 min</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="section-block">
+        <p class="section-label">Key scenario</p>
+        <p class="scenario-text">Emmanuel needs to renew his health insurance card. He arrives at 7:45 am to get a low ticket number, sits in an overcrowded waiting room, and misses a 10 am team meeting at work. He has no idea if he is 5 or 25 positions away. By 11 am he leaves unserved to make another critical work appointment, losing a full morning.</p>
+      </div>
+
+      <div class="quote-block blue-quote">
+        "I don't mind waiting — I mind not knowing. If my phone could just tell me 'you're next in 20 minutes,' I could actually plan my day around it."
+      </div>
+
+    </div>
+  </div>
+
+</div>
